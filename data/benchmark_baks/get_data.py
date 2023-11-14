@@ -7,7 +7,7 @@ import subprocess
 datadir   = os.path.join( os.getcwd(), 'logfiles' )
 basename  = 'gpkde.log.baks*'
 files     = glob.glob( os.path.join( datadir, basename + '*' ) )
-df        = pd.DataFrame(columns=['file', 'nparticles', 'time', 'nthreads', 'nbins', 'nloops', 'tsid'])
+df        = pd.DataFrame(columns=['file', 'nparticles', 'time', 'nthreads', 'nbins', 'nloops'])
 nparline  = 'File will be read until line:'
 nbinsline = '   Active bins       :'
 
@@ -38,5 +38,6 @@ for fname in files:
     nthreads             = fileid.split('omp.')[-1]
     tempdf['nthreads']   = [ nthreads ]
     df                   = pd.concat( [df, tempdf], axis=0 )
+
 
 df.to_csv( os.path.join( os.getcwd() ,'data.csv' ), index=False )
