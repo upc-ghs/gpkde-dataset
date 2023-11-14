@@ -61,7 +61,6 @@ for si in sims:
 
         # load the particles mass/weight statistics of the realization
         data     = np.load( os.path.join( basedir, si['outdir'], 'statsweights.real.'+str(nr)+'.nm.'+str(NM)+'.npz' ) )
-        #data     = np.load( os.path.join( basedir, si['outdir'], 'dataRANREAL'+str(nr)+'NM'+str(NM)+'.npz' ) )
         sigmas   = data['std']
 
         # for each method for handling non uniform weights
