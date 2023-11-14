@@ -7,6 +7,7 @@ Concentration reconstruction was performed on a Intel® Core™ i7-9700 CPU @ 3.
 
 - ```logfiles```: contains the logfiles generated with GPKDE.
 - ```particles```: contains the source particle sets used for performing reconstruction.
+- ```gpkdesims```: [GPKDE](https://github.com/upc-ghs/gpkde.git) files to perform reconstruction.
 
 ### Files:
 
