@@ -1,11 +1,11 @@
 ## Benchmark BAKS
-Dataset for the runtimes benchmark test comparing GPKDE with BAKS. Problem considers a two-dimensional distribution of particles with uniform mass.
+Dataset for the runtimes benchmark test comparing [GPKDE](https://github.com/upc-ghs/gpkde.git) with [BAKS](https://doi.org/10.5281/zenodo.2762790). Problem considers a two-dimensional distribution of particles with uniform mass.
 
 Concentration reconstruction was performed on a Intel® Core™ i7-9700 CPU @ 3.00GHz processor.
 
 ### Folders
 
-- ```logfiles```: contains the logfiles generated with GPKDE.
+- ```logfiles```: contains the logfiles generated with [GPKDE](https://github.com/upc-ghs/gpkde.git).
 - ```particles```: contains the source particle sets used for performing reconstruction.
 - ```gpkdesims```: [GPKDE](https://github.com/upc-ghs/gpkde.git) files to perform reconstruction.
 
