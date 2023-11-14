@@ -1,5 +1,5 @@
 ## Benchmark BAKS
-Dataset for the benchmark test comparing the runtimes of [GPKDE](https://github.com/upc-ghs/gpkde.git) with [BAKS](https://doi.org/10.5281/zenodo.2762790). Problem considers a two-dimensional distribution of particles with uniform mass.
+Dataset for the benchmark test comparing the runtimes of [GPKDE](https://github.com/upc-ghs/gpkde.git) with [BAKS](https://doi.org/10.5281/zenodo.2762790). Problem considers a two-dimensional distribution of particles with uniform mass, and 10 loops of bandwidth optimization.
 
 Concentration reconstruction was performed on a Intel® Core™ i7-9700 CPU @ 3.00GHz processor.
 
