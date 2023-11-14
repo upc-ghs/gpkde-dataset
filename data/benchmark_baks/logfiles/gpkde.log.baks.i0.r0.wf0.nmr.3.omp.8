@@ -1,0 +1,134 @@
+
+GPKDE Version 1.0.0               
+Program compiled Sep 26 2023 20:10:20 with GFORTRAN compiler (ver. 11.4.0)                
+
+This program has been developed and published by the Hydrogeology
+Group (GHS), Universitat Politècnica de Catalunya (UPC). It is free
+to use and modify under the condition that neither the GHS nor UPC
+shall be considered legally responsible for any wrongdoing or damages
+derived from its use.
+
+For bug reports and updates, follow:                                  
+  https://github.com/upc-ghs/gpkde                                    
+----------------------------------------------------------------------
+
+
+  Read simulation file 
+ ----------------------
+Input data file name: particles_mass_mpathrw.tseri.nmr.3.i0.r0.csv
+Input data expected to be specified as (x,y,z,weight).
+File will be read until line:      25200
+Effective weight starting from effective number of points (Kish, 1965,1992).
+Reconstruction output will be written to file: gpkde.out.baks.i0.r0.wf0.nmr.3
+Output column format will default to format 0 with bin ids and density data.
+Output data format will default to text-plain data file.
+Will read reconstruction grid parameters. 
+Will allocate grid for reconstruction adapted to given points.
+Succesfully read reconstruction grid data.
+Optimization will consider the maximum number of loops:   10
+Will not export optimization variables.
+GPKDE run until the maximum number of optimization loops.
+Kernel sizes are bounded by domain constraints.
+Defaults to anisotropic kernels.
+GPKDE will employ a kernel database.
+Initial smoothing specified as a factor multiplying characteristic bin size.
+Initial smoothing factor is set to:   1.000000000E+000
+Will not interpret advanced options.
+GPKDE will load data into arrays.
+Loaded data into arrays.
+Loading time :     0.27000E-01 seconds
+
+  Initialize GPKDE 
+ ------------------
+
+-----------------------
+ GPKDE is initializing 
+  Initializing Histogram
+   Histogram grid will not follow domain limits, will adapt to data points.
+   Histogram determines dimensions to be analyzed based on bin sizes.
+   Will compute Histogram considering 2 dimensions.
+   Grid parameters
+   ---------------
+   - binSize            :   1.000000000E+000   1.000000000E+000   0.000000000E+000
+   - domainSize         :   4.000000000E+002   2.000000000E+002   0.000000000E+000
+   - domainOrigin       :   0.000000000E+000   0.000000000E+000   0.000000000E+000
+   - domainGridSize     :       400       200         1
+   ---------------
+   Dimensionality for reconstruction is determined from domain grid size.
+   Will perform reconstruction in  2 dimensions.
+   - initialSmoothing   :   1.000000000E+000   1.000000000E+000   0.000000000E+000
+  Initializing Kernels Database
+   Database parameters
+   -------------------
+   - minHOverDelta         :   2.500000000E-001
+   - maxHOverDelta         :   1.500000000E+001
+   - deltaHOverDelta       :   4.874219717E-002
+   -------------------
+   Database is for kernels 2D 
+    - Allocated memory Kernel DB    :         0.2E+02 MB
+    - Allocated memory Kernel SD DB :         0.3E+01 MB
+ GPKDE is initialized  
+-----------------------
+
+Opened output unit for writing densities.
+
+  Density reconstruction 
+ ------------------------
+Will perform density reconstruction in parallel.
+Number of threads:   8
+
+ Histogram info 
+  Initializing Histogram
+   Histogram grid will not follow domain limits, will adapt to data points.
+   Histogram determines dimensions to be analyzed based on bin sizes.
+   Will compute Histogram considering 2 dimensions.
+   Grid parameters
+   ---------------
+   - binSize            :   1.000000000E+000   1.000000000E+000   0.000000000E+000
+   - domainSize         :   4.000000000E+002   2.000000000E+002   0.000000000E+000
+   - domainOrigin       :   0.000000000E+000   0.000000000E+000   0.000000000E+000
+   - domainGridSize     :       400       200         1
+   ---------------
+   Dimensionality for reconstruction is determined from domain grid size.
+   Will perform reconstruction in  2 dimensions.
+   - initialSmoothing   :   1.000000000E+000   1.000000000E+000   0.000000000E+000
+   Allocated size    :       279       176         1
+   Max count         :  2.000000000E+001
+   Max raw density   :  2.000000000E+001
+   Min count         :  0.000000000E+000
+   Min raw density   :  0.000000000E+000
+   Mean raw density  :  3.989867004E+000
+   Active bins       :     6316
+   NPoints           :    25200
+   NEffective        :  2.520000000E+004
+
+ Data points info
+   Mean coordinates                 :   1.445770399E+002   1.055262532E+002   5.000000000E-001
+   Std. dev. coordinates            :   6.540496985E+001   5.026355883E+001   0.000000000E+000
+   Std. sigma scale                 :   5.733660741E+001
+   Global smoothing scale Silverman :   1.058925083E+001
+
+ Kernels info
+   initialSmoothing   :   1.000000000E+000   1.000000000E+000   0.000000000E+000
+
+|-----------------------------------------------------------|
+| Optimization                                              |
+|-----------------------------------------------------------|
+| Loop |  hHatOverDelta  |     ALMISE      |      RMSE      |
+|-----------------------------------------------------------|
+     0  1.000000000E+000  0.000000000E+000  7.664257439E-005
+     1  1.115711038E+000  4.772119710E-010  7.658697788E-005
+     2  1.130255435E+000  4.609700576E-010  7.569030921E-005
+     3  1.099321152E+000  5.398396512E-010  7.439373322E-005
+     4  1.060024984E+000  7.593384175E-010  7.325663320E-005
+     5  1.018540611E+000  1.134628694E-009  7.217229873E-005
+     6  9.852101114E-001  1.581261853E-009  7.123395026E-005
+     7  9.530802116E-001  1.935196182E-009  7.034280416E-005
+     8  9.274611113E-001  2.214933915E-009  6.971206097E-005
+     9  9.048308792E-001  2.360214711E-009  6.895886799E-005
+    10  8.888349610E-001  2.472607153E-009  6.846793000E-005
+    - Max loops 
+|-----------------------------------------------------------|
+   Optimization time :     0.68000E-01 seconds
+|-----------------------------------------------------------|
+ Elapsed time :     0.91000E-01 seconds
