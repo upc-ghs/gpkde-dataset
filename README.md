@@ -1,5 +1,5 @@
 # gpkde-dataset
-Dataset with example test cases for the [GPKDE](https://github.com/upc-ghs/gpkde) program. 
+Dataset with data and example test cases for the [GPKDE](https://github.com/upc-ghs/gpkde) program. 
 
 - [1D Gaussian distribution](examples/ex01_1dnormal/)
 - [2D Heterogeneous distribution](examples/ex02_2dhet/)
