@@ -1,0 +1,117 @@
+
+GPKDE Version 1.0.0               
+Program compiled Sep 13 2023 14:23:16 with GFORTRAN compiler (ver. 9.1.0)                 
+
+This program has been developed and published by the Hydrogeology
+Group (GHS), Universitat Politècnica de Catalunya (UPC). It is free
+to use and modify under the condition that neither the GHS nor UPC
+shall be considered legally responsible for any wrongdoing or damages
+derived from its use.
+
+For bug reports and updates, follow:                                  
+  https://github.com/upc-ghs/gpkde                                    
+----------------------------------------------------------------------
+
+
+  Read simulation file 
+ ----------------------
+Input data file name: particles_3_mpathrw.timeseries.np3.csv
+Input data expected to be specified as (x,y,z).
+File will be read until line:    1792000
+Reconstruction output will be written to file: gpkde.out.np3.ts3
+Output column format will default to format 0 with bin ids and density data.
+Output data format will default to text-plain data file.
+Will read reconstruction grid parameters. 
+Will allocate grid for reconstruction adapted to given points.
+Succesfully read reconstruction grid data.
+Optimization will consider the maximum number of loops:   20
+Will not export optimization variables.
+GPKDE will break once convergence is satisfied.
+Relative error convergence set to:   2.000000000E-002
+Kernel sizes are bounded by domain constraints.
+Defaults to anisotropic kernels.
+GPKDE will employ a kernel database.
+Initial smoothing specified as a factor multiplying characteristic bin size.
+Initial smoothing factor is set to:   3.000000000E+000
+Will not interpret advanced options.
+GPKDE will load data into arrays.
+Loaded data into arrays.
+Loading time :     0.19930E+01 seconds
+
+  Initialize GPKDE 
+ ------------------
+
+-----------------------
+ GPKDE is initializing 
+  Initializing Histogram
+   Histogram grid will not follow domain limits, will adapt to data points.
+   Histogram determines dimensions to be analyzed based on bin sizes.
+   Will compute Histogram considering 3 dimensions.
+   Grid parameters
+   ---------------
+   - binSize            :   1.000000000E+000   1.000000000E+000   1.000000000E+000
+   - domainSize         :   5.000000000E+002   1.500000000E+002   1.000000000E+002
+   - domainOrigin       :   0.000000000E+000   0.000000000E+000   0.000000000E+000
+   - domainGridSize     :       500       150       100
+   ---------------
+   Dimensionality for reconstruction is determined from domain grid size.
+   Will perform reconstruction in  3 dimensions.
+   - initialSmoothing   :   3.000000000E+000   3.000000000E+000   3.000000000E+000
+  Initializing Kernels Database
+   Database parameters
+   -------------------
+   - minHOverDelta         :   2.500000000E-001
+   - maxHOverDelta         :   1.000000000E+001
+   - deltaHOverDelta       :   9.458665267E-002
+   -------------------
+   Database is for kernels 3D 
+    - Allocated memory Kernel DB    :         0.2E+04 MB
+    - Allocated memory Kernel SD DB :         0.6E+02 MB
+ GPKDE is initialized  
+-----------------------
+
+Opened output unit for writing densities.
+
+  Density reconstruction 
+ ------------------------
+Will perform density reconstruction in parallel.
+Number of threads:  16
+
+ Histogram info 
+   Allocated size    :       314       113        53
+   Max count         :  4.970000000E+002
+   Max raw density   :  4.970000000E+002
+   Min count         :  0.000000000E+000
+   Min raw density   :  0.000000000E+000
+   Mean raw density  :  3.469103299E+001
+   Active bins       :    51656
+   NPoints           :  1792000
+   NEffective        :  1.792000000E+006
+
+ Data points info
+   Mean coordinates                 :   1.077446885E+002   5.257708937E+001   3.345155218E+001
+   Std. dev. coordinates            :   4.039211816E+001   2.437119660E+001   8.626479793E+000
+   Std. sigma scale                 :   2.040182557E+001
+   Global smoothing scale Silverman :   2.526333854E+000
+
+ Kernels info
+   initialSmoothing   :   3.000000000E+000   3.000000000E+000   3.000000000E+000
+
+|-----------------------------------------------------------|
+| Optimization                                              |
+|-----------------------------------------------------------|
+| Loop |  hHatOverDelta  |     ALMISE      |      RMSE      |
+|-----------------------------------------------------------|
+     0  3.000000000E+000  0.000000000E+000  2.436066048E-005
+     1  1.694703440E+000  3.138731158E-014  1.643160517E-005
+     2  9.342806117E-001  5.769750704E-013  8.268403742E-006
+     3  6.281458807E-001  7.564805396E-009  4.747768027E-006
+     4  5.175652664E-001  2.022275133E-007  3.851494511E-006
+     5  4.874225609E-001  2.456152690E-007  3.777914611E-006
+     6  4.735366381E-001  2.267842571E-007  3.760610531E-006
+     7  4.660402176E-001  2.381937172E-007  3.753729719E-006
+    - Density convergence :   1.9854E-02
+|-----------------------------------------------------------|
+   Optimization time :     0.40310E+02 seconds
+|-----------------------------------------------------------|
+ Elapsed time :     0.40965E+02 seconds
