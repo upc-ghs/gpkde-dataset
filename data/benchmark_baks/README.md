@@ -11,7 +11,7 @@ Concentration reconstruction was performed on a Intel® Core™ i7-9700 CPU @ 3.
 
 ### Files:
 
-- ```get_data.py```: generates ```data.csv```, gathering the dataset from [GPKDE](https://github.com/upc-ghs/gpkde.git) models.
+- ```get_data.py```: generates ```data.csv``` by gathering the data from the [GPKDE](https://github.com/upc-ghs/gpkde.git) runs contained in the folder ```logfiles```.
 - ```figure_bars.py```: loads ```data.csv``` and generates the figure comparing runtimes.
-- ```runbaks.m```: MATLAB routine running the BAKS program. **Note** that in order to run this file, the [BAKS source code](https://doi.org/10.5281/zenodo.2762790) is required and MATLAB should be installed in your system. 
-
+- ```runbaks.m```: MATLAB® routine running the [BAKS](https://doi.org/10.5281/zenodo.2762790) program. **Note** that in order to run this file, the [BAKS source code](https://doi.org/10.5281/zenodo.2762790) is required and MATLAB® should be installed in your system. 
+- ```baksdata.csv```: are the runtimes measured from [BAKS](https://doi.org/10.5281/zenodo.2762790). Runtimes correspond to the MATLAB® version R2023a Update 1 (9.14.0.2239454)
