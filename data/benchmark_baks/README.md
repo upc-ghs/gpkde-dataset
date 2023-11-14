@@ -1,17 +1,16 @@
 ## Benchmark BAKS
+Dataset for the runtimes benchmark test comparing GPKDE with BAKS. Problem considers a two-dimensional distribution of particles with uniform mass.
 
-Dataset for runtime benchmarking between GPKDE and BAKS
-
-. Problem considers a two-dimensional 
-
-**Note**: For running the BAKS routine, the [BAKS source code}(https://doi.org/10.5281/zenodo.2762790) is required and MATLAB should be installed in your system. 
+Concentration reconstruction was performed on a Intel® Core™ i7-9700 CPU @ 3.00GHz processor.
 
 ### Folders
 
-- logfiles: contains the logfiles generated with GPKDE.
-- particles: contains the source particle sets used for performing reconstruction.
+- ```logfiles```: contains the logfiles generated with GPKDE.
+- ```particles```: contains the source particle sets used for performing reconstruction.
 
 ### Files:
 
-- get_data.py: generates ```data.csv```, gathering the dataset from GPKDE models.
-- figure_bars 
+- ```get_data.py```: generates ```data.csv```, gathering the dataset from GPKDE models.
+- ```figure_bars.py```: loads ```data.csv``` and generates the figure comparing runtimes.
+- ```runbaks.m```: MATLAB routine running the BAKS program. **Note** that in order to run this file, the [BAKS source code](https://doi.org/10.5281/zenodo.2762790) is required and MATLAB should be installed in your system. 
+
