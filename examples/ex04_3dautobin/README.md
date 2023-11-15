@@ -6,7 +6,7 @@ Run reconstruction
 gpkde gpkde.sim
 ```
 
-The program writes density to `gpkde.out`. The `python` routine `exportovtk.py` generates files for visualization with `paraview`. The generated files are `gpkde.vts` with the smoothed density reconstruction, and `hist.vts` with the histogram density reconstruction. Each of these files contains a single variable (```rho```). The ```ex03_3dhet.pvsm``` file is a `paraview` state with some visualizations of the density distribution.
+The program writes density to `gpkde.out`. The `python` routine `exportovtk.py` generates files for visualization with `paraview`. The generated files are `gpkde.vts` with the smoothed density reconstruction, and `hist.vts` with the histogram density reconstruction. Each of these files contains a single variable (```rho```). The ```ex04_3dautobin.pvsm``` file is a `paraview` state with some visualizations of the density distribution.
 
 Be sure that the packages `numpy, pandas and pyevtk` are installed. If not, a `requirements.txt` file is included and can be installed with
 
