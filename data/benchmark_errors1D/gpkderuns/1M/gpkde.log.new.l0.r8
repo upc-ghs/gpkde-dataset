@@ -1,6 +1,6 @@
 
 GPKDE Version 1.0.0               
-Program compiled Oct  1 2023 21:13:39 with GFORTRAN compiler (ver. 13.2.1 20230801)       
+Program compiled Nov 11 2023 10:44:31 with GFORTRAN compiler (ver. 13.2.1 20230801)       
 
 This program has been developed and published by the Hydrogeology
 Group (GHS), Universitat Politècnica de Catalunya (UPC). It is free
@@ -35,7 +35,7 @@ Initial smoothing is selected from the global estimate of Silverman (1986).
 Will not interpret advanced options.
 GPKDE will load data into arrays.
 Loaded data into arrays.
-Loading time :     0.11510E+01 seconds
+Loading time :     0.24200E+01 seconds
 
   Initialize GPKDE 
  ------------------
@@ -96,8 +96,8 @@ Number of threads:   4
      4  4.014788432E-001  1.147541874E-006  9.922148179E-004
      5  4.005684504E-001  1.055851154E-006  9.922148059E-004
      6  4.000000000E-001  9.388060985E-007  9.922147967E-004
-    - Density convergence :   1.6050E-16
+    - Density convergence :   6.2389E-17
 |-----------------------------------------------------------|
-   Optimization time :     0.10000E-02 seconds
+   Optimization time :     0.40000E-01 seconds
 |-----------------------------------------------------------|
- Elapsed time :     0.20000E-01 seconds
+ Elapsed time :     0.73000E-01 seconds

@@ -30,9 +30,7 @@ sims = [
 
 binsizeline  = '   - binSize            :'
 gridsizeline = '   - domainGridSize     :'
-dirs      = ['0001M', '001M', '01M', '1M'            ]
-npars     = [1e3    ,    1e4,   1e5,  1e6            ]
-lambdas   = [0.25,  0.1    , 0.05,  0.01, 0.005, 0.001      ]
+lambdas      = [ 0.25,  0.1    , 0.05,  0.01, 0.005, 0.001 ]
 
 df = pd.DataFrame(
         columns=[
@@ -106,8 +104,8 @@ for idsim, sim in enumerate(sims):
             tdf['lambda']     = [ lam ]
             tdf['nloops']     = [ nloops ]
             tdf['time']       = [ time ]
-            tdf['errordens']  = [ np.sqrt(sum((norm.pdf(xg,0,1)-density[:,0,0]/sim['nparticles'])**2)/len(xg) ) ]
-            tdf['errorhist']  = [ np.sqrt(sum((norm.pdf(xg,0,1)-hist[:,0,0]   /sim['nparticles'])**2)/len(xg) ) ]
+            tdf['errordens']  = [ np.sqrt( np.sum( (norm.pdf(xg,0,1)-density[:,0,0]/sim['nparticles'])**2 )/len(xg) ) ]
+            tdf['errorhist']  = [ np.sqrt( np.sum( (norm.pdf(xg,0,1)-hist[:,0,0]   /sim['nparticles'])**2 )/len(xg) ) ]
             df                = pd.concat( [df, tdf], axis=0 )
 
 
