@@ -1,0 +1,127 @@
+
+GPKDE Version 1.0.0               
+Program compiled Nov 11 2023 10:44:31 with GFORTRAN compiler (ver. 13.2.1 20230801)       
+
+This program has been developed and published by the Hydrogeology
+Group (GHS), Universitat Politècnica de Catalunya (UPC). It is free
+to use and modify under the condition that neither the GHS nor UPC
+shall be considered legally responsible for any wrongdoing or damages
+derived from its use.
+
+For bug reports and updates, follow:                                  
+  https://github.com/upc-ghs/gpkde                                    
+----------------------------------------------------------------------
+
+
+  Read simulation file 
+ ----------------------
+Input data file name: ex02data.csv
+Input data expected to be specified as (x,y,z).
+File will be read until line:     226800
+Reconstruction output will be written to file: gpkde.out
+Output column format will default to format 0 with bin ids and density data.
+Output data format will default to text-plain data file.
+Will read reconstruction grid parameters. 
+Will allocate grid for reconstruction adapted to given points.
+Succesfully read reconstruction grid data.
+Optimization will consider the maximum number of loops:   10
+Will not export optimization variables.
+GPKDE will break once convergence is satisfied.
+Kernel sizes are bounded by domain constraints.
+Defaults to anisotropic kernels.
+GPKDE will employ a kernel database.
+Initial smoothing is selected from the global estimate of Silverman (1986). 
+Will not interpret advanced options.
+GPKDE will load data into arrays.
+Loaded data into arrays.
+Loading time :     0.25200E+00 seconds
+
+  Initialize GPKDE 
+ ------------------
+
+-----------------------
+ GPKDE is initializing 
+  Initializing Histogram
+   Histogram grid will not follow domain limits, will adapt to data points.
+   Histogram determines dimensions to be analyzed based on bin sizes.
+   Will compute Histogram considering 2 dimensions.
+   Grid parameters
+   ---------------
+   - binSize            :   1.000000000E+000   1.000000000E+000   0.000000000E+000
+   - domainSize         :   4.000000000E+002   2.000000000E+002   0.000000000E+000
+   - domainOrigin       :   0.000000000E+000   0.000000000E+000   0.000000000E+000
+   - domainGridSize     :       400       200         1
+   ---------------
+   Dimensionality for reconstruction is determined from domain grid size.
+   Will perform reconstruction in  2 dimensions.
+  Initializing Kernels Database
+   Database parameters
+   -------------------
+   - minHOverDelta         :   4.000000000E-001
+   - maxHOverDelta         :   1.000000000E+001
+   - deltaHOverDelta       :   9.467281838E-002
+   -------------------
+   Database is for kernels 2D 
+    - Allocated memory Kernel DB    :         0.2E+01 MB
+    - Allocated memory Kernel SD DB :         0.7E+00 MB
+ GPKDE is initialized  
+-----------------------
+
+Opened output unit for writing densities.
+
+  Density reconstruction 
+ ------------------------
+Will perform density reconstruction in parallel.
+Number of threads:   4
+
+ Histogram info 
+  Initializing Histogram
+   Histogram grid will not follow domain limits, will adapt to data points.
+   Histogram determines dimensions to be analyzed based on bin sizes.
+   Will compute Histogram considering 2 dimensions.
+   Grid parameters
+   ---------------
+   - binSize            :   1.000000000E+000   1.000000000E+000   0.000000000E+000
+   - domainSize         :   4.000000000E+002   2.000000000E+002   0.000000000E+000
+   - domainOrigin       :   0.000000000E+000   0.000000000E+000   0.000000000E+000
+   - domainGridSize     :       400       200         1
+   ---------------
+   Dimensionality for reconstruction is determined from domain grid size.
+   Will perform reconstruction in  2 dimensions.
+   Allocated size    :       288       177         1
+   Max count         :  1.100000000E+002
+   Max raw density   :  1.100000000E+002
+   Min count         :  0.000000000E+000
+   Min raw density   :  0.000000000E+000
+   Mean raw density  :  2.410714286E+001
+   Active bins       :     9408
+   NPoints           :   226800
+   NEffective        :  2.268000000E+005
+
+ Data points info
+   Mean coordinates                 :   1.447224964E+002   1.054982824E+002   5.000000000E-001
+   Std. dev. coordinates            :   6.548191175E+001   5.031623029E+001   0.000000000E+000
+   Std. sigma scale                 :   5.740037414E+001
+   Global smoothing scale Silverman :   7.350342026E+000
+
+ Kernels info
+   initialSmoothing   :   7.350342026E+000   7.350342026E+000   0.000000000E+000
+
+|-----------------------------------------------------------|
+| Optimization                                              |
+|-----------------------------------------------------------|
+| Loop |  hHatOverDelta  |     ALMISE      |      RMSE      |
+|-----------------------------------------------------------|
+     0  7.350342026E+000  0.000000000E+000  9.654289912E-005
+     1  3.449836049E+000  3.378715587E-012  7.059506408E-005
+     2  2.162204699E+000  9.899615610E-012  5.553394375E-005
+     3  1.420354634E+000  2.469936880E-011  4.238017197E-005
+     4  1.028816779E+000  5.686818773E-011  3.259635165E-005
+     5  8.144496093E-001  1.124227854E-010  2.644354280E-005
+     6  7.085038347E-001  2.354361353E-010  2.347126024E-005
+     7  6.588554530E-001  5.041565149E-010  2.213170295E-005
+    - ALMISE convergence :   9.4407E-03
+|-----------------------------------------------------------|
+   Optimization time :     0.56200E+00 seconds
+|-----------------------------------------------------------|
+ Elapsed time :     0.59900E+00 seconds
