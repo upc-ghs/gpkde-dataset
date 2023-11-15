@@ -14,7 +14,7 @@ Repository with benchmark data and example test cases for the [GPKDE](https://gi
 - [1D Gaussian distribution](examples/ex01_1dnormal/)
 - [2D Heterogeneous distribution](examples/ex02_2dhet/)
 - [3D Heterogeneous distribution](examples/ex03_3dhet/)
-- [3D Sliced reconstruction](examples/ex04_3dsliced/)
+- [3D Heterogeneous with automatic bin size](examples/ex04_3dautobin/)
 
 ## License
 MIT License

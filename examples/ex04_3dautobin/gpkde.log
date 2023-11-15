@@ -1,0 +1,112 @@
+
+GPKDE Version 1.0.0               
+Program compiled Nov 11 2023 10:44:31 with GFORTRAN compiler (ver. 13.2.1 20230801)       
+
+This program has been developed and published by the Hydrogeology
+Group (GHS), Universitat Politècnica de Catalunya (UPC). It is free
+to use and modify under the condition that neither the GHS nor UPC
+shall be considered legally responsible for any wrongdoing or damages
+derived from its use.
+
+For bug reports and updates, follow:                                  
+  https://github.com/upc-ghs/gpkde                                    
+----------------------------------------------------------------------
+
+
+  Read simulation file 
+ ----------------------
+Input data file name: ex04data.csv
+Input data expected to be specified as (x,y,z).
+File will be read until line:     153600
+Reconstruction output will be written to file: gpkde.out
+Output column format will default to format 0 with bin ids and density data.
+Output data format will default to text-plain data file.
+Will read reconstruction grid parameters. 
+Will allocate grid for reconstruction adapted to given points.
+Selected automatic bin size selection with multidimensional Scott's rule.
+Default to unitary bin factor. 
+Succesfully read reconstruction grid data.
+Optimization will consider the maximum number of loops:   20
+Will not export optimization variables.
+GPKDE will break once convergence is satisfied.
+Relative error convergence set to:   2.000000000E-002
+Kernel sizes are bounded by domain constraints.
+Defaults to anisotropic kernels.
+GPKDE will employ a kernel database.
+Initial smoothing is selected from the global estimate of Silverman (1986). 
+Will not interpret advanced options.
+GPKDE will load data into arrays.
+Loaded data into arrays.
+Loading time :     0.21400E+00 seconds
+
+  Initialize GPKDE 
+ ------------------
+
+-----------------------
+ GPKDE is initializing 
+ GPKDE is initialized without a predefined grid, defined later. 
+----------------------------------------------------------------
+
+Opened output unit for writing densities.
+
+  Density reconstruction 
+ ------------------------
+Will perform density reconstruction in parallel.
+Number of threads:   4
+
+ Histogram info 
+  Initializing Histogram
+   Histogram grid will not follow domain limits, will adapt to data points.
+   Histogram determines dimensions to be analyzed based on bin sizes.
+   Will compute Histogram considering 3 dimensions.
+   Grid parameters
+   ---------------
+   - binSize            :   2.404751770E+000   1.026308585E+000   6.042538694E-001
+   - domainSize         :   2.000000000E+002   1.500000000E+002   1.000000000E+002
+   - domainOrigin       :   0.000000000E+000   0.000000000E+000   0.000000000E+000
+   - domainGridSize     :        83       146       165
+   ---------------
+   Dimensionality for reconstruction is determined from domain grid size.
+   Will perform reconstruction in  3 dimensions.
+  Initializing Kernels Database
+   Database parameters
+   -------------------
+   - minHOverDelta         :   2.500000000E-001
+   - maxHOverDelta         :   1.000000000E+001
+   - deltaHOverDelta       :   1.756609264E-001
+   -------------------
+   Database is for kernels 3D 
+    - Allocated memory Kernel DB    :         0.3E+03 MB
+    - Allocated memory Kernel SD DB :         0.3E+02 MB
+   Allocated size    :        26        24        27
+   Max count         :  7.690000000E+002
+   Max raw density   :  5.156543490E+002
+   Min count         :  0.000000000E+000
+   Min raw density   :  0.000000000E+000
+   Mean raw density  :  8.743358187E+001
+   Active bins       :     1178
+   NPoints           :   153600
+   NEffective        :  1.536000000E+005
+
+ Data points info
+   Mean coordinates                 :   4.191473761E+001   7.090939015E+001   4.899382100E+001
+   Std. dev. coordinates            :   7.507979327E+000   3.204282343E+000   1.886567094E+000
+   Std. sigma scale                 :   3.567045918E+000
+   Global smoothing scale Silverman :   6.274099207E-001
+
+ Kernels info
+   initialSmoothing   :   6.274099207E-001   6.274099207E-001   6.274099207E-001
+
+|-----------------------------------------------------------|
+| Optimization                                              |
+|-----------------------------------------------------------|
+| Loop |  hHatOverDelta  |     ALMISE      |      RMSE      |
+|-----------------------------------------------------------|
+     0  5.491557011E-001  0.000000000E+000  2.638330997E-004
+     1  4.042971839E-001  4.222248906E-006  1.128583138E-004
+     2  4.016923262E-001  8.357054029E-004  1.128513014E-004
+    - Density convergence :   1.7240E-02
+|-----------------------------------------------------------|
+   Optimization time :     0.47000E-01 seconds
+|-----------------------------------------------------------|
+ Elapsed time :     0.55300E+00 seconds
