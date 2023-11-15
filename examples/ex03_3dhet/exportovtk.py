@@ -57,7 +57,15 @@ pyevtk.hl.gridToVTK(
         os.path.join( basedir, 'gpkde' ),
         X,Y,Z,
         cellData={
-            'histrho' : histogram,
-            'gpkderho': density
+            'rho': density
         },
     )
+
+pyevtk.hl.gridToVTK(
+        os.path.join( basedir, 'hist' ),
+        X,Y,Z,
+        cellData={
+            'rho' : histogram,
+        },
+    )
+
