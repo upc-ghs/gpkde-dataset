@@ -1,0 +1,104 @@
+
+GPKDE Version 1.0.0               
+Program compiled Oct  1 2023 21:13:39 with GFORTRAN compiler (ver. 13.2.1 20230801)       
+
+This program has been developed and published by the Hydrogeology
+Group (GHS), Universitat Politècnica de Catalunya (UPC). It is free
+to use and modify under the condition that neither the GHS nor UPC
+shall be considered legally responsible for any wrongdoing or damages
+derived from its use.
+
+For bug reports and updates, follow:                                  
+  https://github.com/upc-ghs/gpkde                                    
+----------------------------------------------------------------------
+
+
+  Read simulation file 
+ ----------------------
+Input data file name: particles_gaussian_r0.csv
+Input data expected to be specified as (x,y,z).
+File will be read until line:    1000000
+Reconstruction output will be written to file: gpkde.out.new.l0.r0
+Output column format will default to format 0 with bin ids and density data.
+Output data format will default to text-plain data file.
+Will read reconstruction grid parameters. 
+Will allocate grid for reconstruction using domain size.
+Succesfully read reconstruction grid data.
+Optimization will consider the maximum number of loops:   20
+Will not export optimization variables.
+GPKDE will break once convergence is satisfied.
+Relative error convergence set to:   1.000000000E-003
+Kernel sizes are bounded by domain constraints.
+Defaults to anisotropic kernels.
+GPKDE will compute raw kernels.
+Initial smoothing is selected from the global estimate of Silverman (1986). 
+Will not interpret advanced options.
+GPKDE will load data into arrays.
+Loaded data into arrays.
+Loading time :     0.11630E+01 seconds
+
+  Initialize GPKDE 
+ ------------------
+
+-----------------------
+ GPKDE is initializing 
+  Initializing Histogram
+   Histogram grid will follow domain grid size.
+   Histogram determines dimensions to be analyzed based on bin sizes.
+   Will compute Histogram considering 1 dimensions.
+   Grid parameters
+   ---------------
+   - binSize            :   2.500000000E-001   0.000000000E+000   0.000000000E+000
+   - domainSize         :   1.200000000E+001   0.000000000E+000   0.000000000E+000
+   - domainOrigin       :  -6.000000000E+000   0.000000000E+000   0.000000000E+000
+   - domainGridSize     :        48         1         1
+   ---------------
+   Dimensionality for reconstruction is determined from domain grid size.
+   Will perform reconstruction in  1 dimensions.
+ GPKDE is initialized  
+-----------------------
+
+Opened output unit for writing densities.
+
+  Density reconstruction 
+ ------------------------
+Will perform density reconstruction in parallel.
+Number of threads:   4
+
+ Histogram info 
+   Max count         :  9.859700000E+004
+   Max raw density   :  3.943880000E+005
+   Min count         :  0.000000000E+000
+   Min raw density   :  0.000000000E+000
+   Mean raw density  :  1.052631579E+005
+   Active bins       :       38
+   NPoints           :  1000000
+   NEffective        :  1.000000000E+006
+
+ Data points info
+   Mean coordinates                 :   1.748292265E-003   0.000000000E+000   0.000000000E+000
+   Std. dev. coordinates            :   1.000018257E+000   0.000000000E+000   0.000000000E+000
+   Std. sigma scale                 :   1.000018257E+000
+   Global smoothing scale Silverman :   6.683372636E-002
+
+ Kernels info
+   initialSmoothing   :   6.683372636E-002   0.000000000E+000   0.000000000E+000
+
+|-----------------------------------------------------------|
+| Optimization                                              |
+|-----------------------------------------------------------|
+| Loop |  hHatOverDelta  |     ALMISE      |      RMSE      |
+|-----------------------------------------------------------|
+     0  2.673349054E-001  0.000000000E+000  2.845233117E-004
+     1  4.010132133E-001  1.423642246E-006  9.807625403E-004
+     2  4.034358763E-001  1.267800533E-006  9.807626461E-004
+     3  4.026330984E-001  1.210745262E-006  9.807625840E-004
+     4  4.022626795E-001  1.139546907E-006  9.807625552E-004
+     5  4.016629924E-001  1.049954136E-006  9.807625196E-004
+     6  4.008019256E-001  9.343451704E-007  9.807624791E-004
+     7  4.002437617E-001  9.616157555E-007  9.807624702E-004
+    - ALMISE convergence :   3.8531E-04
+|-----------------------------------------------------------|
+   Optimization time :     0.20000E-02 seconds
+|-----------------------------------------------------------|
+ Elapsed time :     0.20000E-01 seconds
