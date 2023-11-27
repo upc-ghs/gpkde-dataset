@@ -5,7 +5,7 @@ Repository with benchmark data and example test cases for the [GPKDE](https://gi
 ## Data
 - [Benchmark BAKS](data/benchmark_baks)
 - [Benchmark Cluster](data/benchmark_cluster)
-- [Benchmark Non uniform mass](data/benchmark_nonuniformmass)
+- [Benchmark Non uniform mass](data/benchmark_nonuniformass)
 - [Benchmark Errors 1D](data/benchmark_errors1D)
 - [Benchmark Timeseries 2D](data/benchmark_timeseries2D)
 
